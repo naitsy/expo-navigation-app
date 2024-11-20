@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { View, Text } from 'react-native'
-import { Slot, SplashScreen } from 'expo-router'
+import { Slot, SplashScreen, Stack } from 'expo-router'
 import { useFonts } from 'expo-font'
 
 import "../global.css"
@@ -25,9 +25,9 @@ const RootLayout = () => {
     if( !fontsLoaded && !error ) return null
 
     return (
-        <View style={{ backgroundColor: 'white' }}>
+        // <View style={{ backgroundColor: 'white' }}>
             <Slot />
-        </View>
+        // </View>
     )
 }
 

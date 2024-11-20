@@ -10,19 +10,46 @@ export class HomeScreen extends Component {
       <SafeAreaView>
         <View className='px-10'>
 
+
+			<CustomButton 
+				color={'primary'}
+				onPress={ () => router.push('/products') }
+        className='mb-2'
+			>
+				Products
+			</CustomButton>
+
+			<CustomButton 
+				color={'secondary'}
+				onPress={ () => router.push('/profile') }
+        className='mb-2'        
+			>
+				Profile
+			</CustomButton>    
+
+			<CustomButton 
+				color={'terciary'}
+				onPress={ () => router.push('/settings') }
+        className='mb-2'
+			>
+				Settings
+			</CustomButton>        
+
+			<CustomButton 
+				color={'primary'}
+				onPress={ () => router.push('/products') }
+        variant='text-only'
+        className='mb-2'
+			>
+				Products
+			</CustomButton>
+
+
 			{/* <Link href="/products" asChild>
 				<CustomButton color={'primary'}>
 					Productos
 				</CustomButton>			
 			</Link> */}
-
-			<CustomButton 
-				color={'primary'}
-				onPress={ () => router.push('/products') }
-			>
-				Productos
-			</CustomButton>
-
 
           {/* <Link className='mb-5' href="/products">Productos</Link>
           <Link className='mb-5' href="/profile">Perfil</Link>
