@@ -21,7 +21,7 @@ export class ProductsScreen extends Component {
                 <Text className='font-work-black'>
                   { item.price }
                 </Text>
-                <Link href={`/(stack)/products/${ item.id }`}
+                <Link href={`/tabs/(stack)/products/${ item.id }`}
                   className='text-primary'>
                   Ver detalles
                 </Link>

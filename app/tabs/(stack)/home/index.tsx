@@ -13,7 +13,7 @@ export class HomeScreen extends Component {
 
 			<CustomButton 
 				color={'primary'}
-				onPress={ () => router.push('/products') }
+				onPress={ () => router.push('/tabs/(stack)/products') }
         className='mb-2'
 			>
 				Products
@@ -21,7 +21,7 @@ export class HomeScreen extends Component {
 
 			<CustomButton 
 				color={'secondary'}
-				onPress={ () => router.push('/profile') }
+				onPress={ () => router.push('/tabs/(stack)/profile') }
         className='mb-2'        
 			>
 				Profile
@@ -29,7 +29,7 @@ export class HomeScreen extends Component {
 
 			<CustomButton 
 				color={'terciary'}
-				onPress={ () => router.push('/settings') }
+				onPress={ () => router.push('/tabs/(stack)/settings') }
         className='mb-2'
 			>
 				Settings
@@ -37,7 +37,7 @@ export class HomeScreen extends Component {
 
 			<CustomButton 
 				color={'primary'}
-				onPress={ () => router.push('/products') }
+				onPress={ () => router.push('/tabs/(stack)/products') }
         variant='text-only'
         className='mb-2'
 			>
