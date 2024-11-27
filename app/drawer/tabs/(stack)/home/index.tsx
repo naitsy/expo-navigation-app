@@ -1,11 +1,20 @@
 import CustomButton from '@/components/shared/CustomButton'
-import { Link, router } from 'expo-router'
+import { DrawerActions } from '@react-navigation/native'
+import { Link, router, useNavigation } from 'expo-router'
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-export class HomeScreen extends Component {
-  render() {
+const HomeScreen = () => {
+
+	const navigation = useNavigation()
+
+	const onToggleDrawer = () => {
+
+		navigation.dispatch( DrawerActions.toggleDrawer )
+
+	}
+
     return (
       <SafeAreaView>
         <View className='px-10'>
@@ -13,7 +22,7 @@ export class HomeScreen extends Component {
 
 			<CustomButton 
 				color={'primary'}
-				onPress={ () => router.push('/tabs/(stack)/products') }
+				onPress={ () => router.push('/drawer/tabs/(stack)/products') }
         className='mb-2'
 			>
 				Products
@@ -21,7 +30,7 @@ export class HomeScreen extends Component {
 
 			<CustomButton 
 				color={'secondary'}
-				onPress={ () => router.push('/tabs/(stack)/profile') }
+				onPress={ () => router.push('/drawer/tabs/(stack)/profile') }
         className='mb-2'        
 			>
 				Profile
@@ -29,7 +38,7 @@ export class HomeScreen extends Component {
 
 			<CustomButton 
 				color={'terciary'}
-				onPress={ () => router.push('/tabs/(stack)/settings') }
+				onPress={ () => router.push('/drawer/tabs/(stack)/settings') }
         className='mb-2'
 			>
 				Settings
@@ -37,11 +46,17 @@ export class HomeScreen extends Component {
 
 			<CustomButton 
 				color={'primary'}
-				onPress={ () => router.push('/tabs/(stack)/products') }
+				onPress={ () => router.push('/drawer/tabs/(stack)/products') }
         variant='text-only'
         className='mb-2'
 			>
 				Products
+			</CustomButton>
+
+			<CustomButton
+				color={'primary'}
+				onPress={ onToggleDrawer }>
+				Abrir Menu				
 			</CustomButton>
 
 
@@ -57,7 +72,6 @@ export class HomeScreen extends Component {
         </View>
       </SafeAreaView>
     )
-  }
 }
 
 export default HomeScreen
